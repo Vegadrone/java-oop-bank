@@ -6,13 +6,21 @@ public class Main {
 		
 		System.out.println(contoProva);
 		
+		System.out.println("---------------------");
+		
 		contoProva.addMoney(1000);
-		System.out.println("Il tuo nuovo saldo è: " + contoProva.getSaldo() + " " + "€");
+		System.out.println(contoProva);
 		
-		contoProva.getMoney(150);
-		System.out.println("Il tuo nuovo saldo è: " + contoProva.getSaldo() + " " + "€");
+		System.out.println("---------------------");
 		
-		contoProva.getMoney(950);
-		System.out.println("Il tuo nuovo saldo è: " + contoProva.getSaldo() + " " + "€");
+		boolean res = contoProva.getMoney(150);
+		System.out.println("risultato prelievo: " + res);
+		System.out.println(contoProva);
+		
+		System.out.println("---------------------");
+		
+		res = contoProva.getMoney(950);
+		System.out.println("risultato prelievo: " + res);
+		System.out.println(contoProva);
 	}
 }

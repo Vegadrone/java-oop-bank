@@ -40,12 +40,12 @@ public class Conto {
 		saldo += money;
 	}
 	
-	public void getMoney( int money) {
-		if((saldo- money) < 0) {
-			System.out.println("Il tuo saldo non può essere meno di 0");
-		} else {
-			saldo -= money;
+	public boolean getMoney(int money) {
+		if(saldo < money) {
+			return false;
 		}
+		saldo -= money;
+		return true;
 	}
 	
 	
